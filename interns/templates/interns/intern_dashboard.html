@@ -1,0 +1,95 @@
+{% extends "layout.html" %}
+
+{%block content%}
+<title>Dashboard</title>
+
+
+<div class="dashboard-title">
+  <h1>Your DashBoard</h1>
+
+  <h4>Manage all your activities here</h4>
+</div>
+
+
+<div class="main-container">
+
+  <div class="days-container">
+        <h3>Days</h3>
+
+      {% for day in intern_days %}
+         <h4>
+              <a href="{% url 'task_details' day.Internship_day%}">{{day.id}}</a>
+         </h4>
+      {% endfor %}
+   </div>
+
+{% if page == "tasks" or page == "other_details" %}
+<div class="tasks-wrapper">
+
+
+  <div class="mid">
+    
+  <div class="tasks-container">
+    <h1>Tasks | {{intern_day}}</h1>
+
+    {% for task in tasks %}
+    <p> <a href="{% url 'other_details' intern_day  task.task %}"> {{task.task}}</a></p>
+    {% empty %}
+    <p>No tasks for this day</p>
+    {% endfor %}
+    <div class="task-add-btn-wrapper">
+      <button class="task-add-btn">+ Add Task</button>
+    </div>
+  </div>
+
+  
+  </div>
+  <div class="other">
+ <div class="details-or-form">
+    <div class="tasks-detail-display">
+      <div class="task-form">
+        <form id="task-add-form" action="" method="POST">
+          {% csrf_token %} {{form}}
+          <button class="add-btn">+Add</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  {% if page == "other_details" %}
+  <p>Task Details</p>
+
+  {% for tool in task_tools  %}
+  <p>{{tool.tool}}</p>
+  {% endfor %}
+
+  {% for skill in task_skills  %}
+  <p>{{skill.skill}}</p>
+  {% endfor %}
+  
+  {% for experience in experiences  %}
+  <p>{{experience.experience}}</p>
+  {% endfor %}
+  
+  {% for suggestion in suggestions  %}
+  <p>{{suggestion.suggestion}}</p>
+  {% endfor %}
+
+  {% for image in task_images  %}
+  <img src="{{image.task_image.url}}" alt="">
+  {% endfor %}
+  
+  
+  <h4>{{task}}</h4>
+  <hr>
+  {% endif %}
+  
+
+  </div>
+  
+
+  </div>
+
+   {% endif %}
+
+</div>
+{% endblock content%}

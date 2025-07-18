@@ -1,0 +1,30 @@
+{% extends "layout.html" %} {% block content %}
+<h1>Log In Page</h1>
+<p>Please log in</p>
+
+<div class="form-wrapp">
+<form action="" method ='POST'>
+  {% csrf_token %}
+  
+  {% if error %}
+  <p class="error">{{error}}</p>
+  {% endif %}
+  <div class="input-group">
+    
+    <label for="username">Username</label>
+    <input type="text" id='username' name ='username'>
+  </div>
+  <div class="input-group">
+    <label for="password">Password</label>
+    <input type="text" id='password' name ='password'>
+</div>
+    
+<button>Login</button>
+  </div>
+  
+  
+</form>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "layout.html" %} {% block content %}
+<title>Application Form</title>
+
+<div class="form-container">
+  
+            <div class="intern-form">
+              <h2>Application Form</h2>
+                <form action="" method="POST">
+                    {% csrf_token %} {{form}}
+                    <button class="btn">Submit</button>
+                </form>
+            </div>
+        </div>
+
+
+{% endblock %}

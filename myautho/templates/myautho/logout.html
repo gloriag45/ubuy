@@ -1,0 +1,38 @@
+{% extends "layout.html" %}z
+
+{% block content %}
+
+<title>Logout</title>
+
+
+<div class="form-wrapp logout">
+<form action="" method ='POST'>
+    <h2>Logout</h2>
+    <p class="logout">Are you sure you want to log out</p>
+        
+<div class="logout-dtl">
+        <a href="" class="no">No</a>
+        <div class="logout-btn">
+           <button class="yes">Yes</button>
+        </div>
+   
+    </div>
+    
+    
+  {% csrf_token %}
+   
+  {% if error %}
+  <p class="error">{{error}}</p>
+  {% endif %}
+  <div class="input-group">
+    
+    
+
+    
+  </div>
+  
+  
+</form>
+</div>
+
+{% endblock content %}

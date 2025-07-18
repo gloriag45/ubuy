@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+<h1>Your tasks</h1>
+<hr />
+{% block content %} {% if page == "days" %}
+<div class="div">
+  <h1>Days</h1>
+  {% for day in intern_days %}
+  <h3>{{day.Internship_day}}</h3>
+  {%endfor%}
+</div>
+
+{% elif page == "tasks" %}
+<div class="div">
+  <h1>Tasks| {{intern_day}}</h1>
+
+  {% for task in tasks %}
+  <p> <a href=""> {{task.task}}</a></p>
+  {% empty %}
+  <p>No tasks for this day</p>
+  {% endfor %}
+  <a href="{%url 'intern_dashboard' %}">DashBoard</a>
+</div>
+{% endif %} {% endblock %}

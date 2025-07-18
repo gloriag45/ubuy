@@ -1,0 +1,27 @@
+    {% extends "layout.html" %}
+    <title>Register</title>
+  {% block content %}
+  
+    <h1 >Register Account</h1>
+    <p>Register your Internship account</p>
+    
+<div class="form-wrapp">
+<form action="" method ='POST'>
+  {% csrf_token %}
+  
+  {% for field in form  %}
+  <div class="input-group">
+    {{field.label_tag}}
+    {{field}}
+    <small>{{field.help_text}}</small>
+  </div>
+  {% endfor %}
+  <button>Register</button>
+</form>
+</div>
+
+
+  {% endblock content %}
+    {% include 'navbar.html'%}
+    
+

@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{%block content%}
+<title>Other details</title> 
+
+  
+  
+  
+  <h1>{{task}}</h1>
+  <hr>
+
+  <h3>Task Details</h3>
+
+ <h4>Tools:</h4>
+  {% for tool in task_tools  %}
+  <p> {{tool.tool_name}}</p>
+  {% endfor %}
+
+
+  <h4>Skills</h4>
+  {% for skill in task_skills  %}
+  <p>{{skill.skill}}</p>
+  {% endfor %}
+  
+  <h4>Experiences</h4>
+  {% for experience in task_experiences  %}
+  <p>{{experience.experience}}</p>
+  {% endfor %}
+  
+  <h4>Suggestions</h4>
+  {% for suggestion in task_suggestions  %}
+  <p>{{suggestion.suggestion}}</p>
+  {% endfor %}
+
+
+  <h4>Challenges</h4>
+  {% for challenge in task_challenges  %}
+  <p>{{challenge.challenge}}</p>
+  {% endfor %}
+
+  {% for image in task_images  %}
+  <img src="{{image.task_image.url}}" alt="image">
+  {% endfor %}
+  
+  
+  
+  
+</div>
+
+
+
+
+{% endblock %}

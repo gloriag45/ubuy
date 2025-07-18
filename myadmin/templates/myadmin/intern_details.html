@@ -1,0 +1,15 @@
+{% extends "layout.html" %} {% block content %}
+<title>Intern Details</title>
+<h1>All Interns</h1>
+<p>This is coming from my html</p>
+<hr />
+
+<div class="intern-container">
+  <h1>{{intern.first_name}}</h1>
+  <div class="intern">
+    <p>University:{{intern.university}}</p>
+    <p>Program:{{intern.program}}</p>
+    <p>Phone Number:{{intern.phone_number}}</p>
+  </div>
+</div>
+{% endblock %}

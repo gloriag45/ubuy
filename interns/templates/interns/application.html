@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<title>Apply</title>
+<div class="application-page">
+    <div class="application-header">
+        <h1>Apply on GIMS</h1>
+        <p class="subtitle">Start Your Learning Journey </p>
+    </div>
+
+    <div class="application-container">
+        <div class="application-info">
+            <h2>Application Requirements</h2>
+            <p>Before you begin, please ensure you have:</p>
+            <ul class="requirements-list">
+                <li>Personal details ready (full name, contact information)</li>
+                <li>Educational background information</li>
+            </ul>
+
+            <h2>Application Process</h2>
+            <ol class="process-steps">
+                <li>Fill out all required fields</li>
+                <li>Review your information</li>
+                <li>Submit your application</li>
+            </ol>
+
+            
+            <div class="cta-section">
+                <a href="{% url 'intern_details'%}" class="apply-butto">Access the Application Form</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+ 

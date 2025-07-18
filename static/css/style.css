@@ -1,0 +1,348 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+  /* background-color: teal; */
+
+.heading {
+  color: red;
+  font-family: "Courier New", Courier, monospace;
+}
+.navbar {
+  display: flex;
+  align-items:center;
+  justify-content:space-around;
+  background-color:aqua;
+  padding: 2rem;
+}
+
+.link {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-left: 3rem;
+}
+.link:hover {
+  color: red;
+}
+.link.active {
+  color: red;
+}
+.dashboard-title {
+  /* background-color: #f9f9f9; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  /* padding: 1rem 0; */
+  /* margin-top: -2rem; */
+}
+.dashboard-title p {
+  color: #ff813e;
+}
+.days-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.2rem;
+  margin-top: 1rem;
+}
+.days-container h4 {
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: gray;
+  text-decoration: none;
+  padding: 0.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.days-container h4 a {
+  text-decoration: none;
+  color: #f9f9f9;
+  font-size: 12px;
+}
+.tasks-container {
+  margin-top: 2rem;
+  max-width: 300px;
+  background-color: #f8f8f8;
+  min-height: 60vh;
+  padding: 1rem;
+}
+.tasks-container h1 {
+  font-size: 20px;
+  background-color: #ff813e;
+  margin: -1rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  text-align: center;
+}
+.task-add-btn-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.2rem;
+}
+.task-add-btn {
+  padding: 0.3rem 1rem;
+  border: none;
+  background-color: #ff813e;
+  color: #f8f8f8;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  transition: all 1s ease;
+}
+.task-add-btn:hover {
+  transform: translateY(-2px);
+}
+.tasks-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+.mid{
+  /* background-color: red; */
+}
+.other{
+  /* background-color: blue; */
+}
+.add-btn {
+  padding: 0.5rem;
+  border: none;
+  color: #fff;
+  background-color: #ff813e;
+}
+.task-add-form {
+  box-shadow: 0 0 10px rgba(0, 0, 0.2);
+  max-width: 300px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+#task-add-form input {
+  display: block;
+  width: 100px;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  padding: 0.2rem 1rem;
+  border: 1px solid silver;
+  font-family: "Poppins" sans-serif;
+  outline: none;
+}
+#task-add-form button {
+  display: block;
+  max-width: 200px;
+}
+.add-btn {
+  cursor: pointer;
+  border-radius: 8px;
+}
+.mid-wrapper{
+  display: flex;
+  gap: 10rem;
+  align-items: center;
+  
+}
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  flex-direction: column;
+  gap:1rem;
+}
+.form-container{
+  /* background-color: blue; */
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* max-width: 1200px; */
+  width:100%;
+  
+}
+.intern-form{
+  background-color: rgb(240, 175, 194);
+  padding: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  /* max-width: 1200px;  */
+  /* max-height: 500px; */
+  /* border: 1px solid aqua; */
+  border-radius: 5px;
+  /* margin-top: 120px; */
+
+
+}
+.intern-form input{
+ display: block;
+  width: 200px;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  padding: 0.2rem 1rem;
+  border: 1px solid silver;
+  font-family: "Poppins" sans-serif;
+  outline: none; 
+}
+.btn{
+  border-radius: 8px;
+  cursor: pointer;
+  margin-left: 5rem;
+  padding: 0.4rem;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  background-color: rgb(69, 140, 247);
+  border:none;
+  font-weight: bold;
+  
+}
+.btn:hover{
+  color:white;
+  
+}
+.application-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+.application-header {
+    Text-align: center;
+    Margin-bottom: 2.5rem;
+}
+
+.application-header h1 {
+    Font-size: 2.5rem;
+    Color: #2c3e50;
+    Margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    Font-size: 1.2rem;
+    Color: #7f8c8d;
+}
+
+.application-container {
+    Background: #fff;
+    Border-radius: 10px;
+    Box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    Padding: 1rem;
+}
+
+.application-info h2 {
+    Color: #3498db;
+    Margin-top: 1.5rem;
+    Margin-bottom: 1rem;
+    Font-size: 1.5rem;
+    Border-bottom: 2px solid #ecf0f1;
+    Padding-bottom: 0.5rem;
+}
+
+.requirements-list, .process-steps {
+    Margin-left: 1.5rem;
+    Line-height: 1.8;
+}
+
+.requirements-list li, .process-steps li {
+    Margin-bottom: 0.5rem;
+}
+
+.note-box {
+    Background-color: #f8f9fa;
+    Border-left: 4px solid #3498db;
+    Padding: 1rem;
+    Margin: 1.5rem 0;
+    Border-radius: 0 4px 4px 0;
+}
+
+.cta-section {
+    Text-align: center;
+    Margin: 2.5rem 0;
+}
+
+.apply-button {
+    Display: inline-block;
+    Background-color: #3498db;
+    Color: white;
+    Padding: 0.8rem 2rem;
+    Border-radius: 5px;
+    Text-decoration: none;
+    Font-weight: bold;
+    Transition: all 0.3s ease;
+    Box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.apply-button:hover {
+    Background-color: #2980b9;
+    Transform: translateY(-2px);
+    Box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.support-section {
+    Background-color: #f5f7fa;
+    Padding: 1.5rem;
+    Border-radius: 8px;
+    Margin-top: 2rem;
+}
+
+.support-section h3 {
+    Color: #2c3e50;
+    Margin-top: 0;
+}
+
+.form-wrapp{
+  display: flex;
+  justify-content: center;
+}
+.input-group{
+  margin-block: 1rem;
+}
+.input-group label{
+  display: block;
+
+}
+.input-group input{
+  display: block;
+  width: 100%;
+  padding: .5rem;
+  border-radius: 8px;
+  border: 1px solid silver;
+  outline: none;
+}
+.form-wrapp button{
+  padding: .5rem 1rem;
+  border: none;
+  background-color: #2980b9;
+  border-radius: 8px;
+  margin-left: 50%;
+  cursor: pointer;
+}
+.input-group small{
+
+}
+.error{
+  background-color: red;
+  border-radius: 8px;
+  padding: .5rem;
+}
+.form-wrapp.logout{
+  margin-bottom: 1rem;
+}
+.yes{
+  background-color: crimson;
+}
+.no{
+  background-color: #ff813e;
+  text-decoration: none;
+  padding:.3rem;
+  /* margin-top:2rem; */
+  border-radius: 8px;
+}

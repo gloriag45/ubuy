@@ -1,0 +1,17 @@
+{% extends "layout.html" %} {% block content %}
+<title>Interns</title>
+<h1>All Interns</h1>
+<p>This is coming from my html</p>
+<hr />
+{% for intern in interns %}
+
+<div class="intern-container">
+  <div class="intern">
+    <h2>
+      <a href="{%url 'intern_details' intern.first_name %}"
+        >{{intern.first_name}}</a
+      >
+    </h2>
+  </div>
+</div>
+{%endfor %} {% endblock %}
